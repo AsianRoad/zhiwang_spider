@@ -1,0 +1,846 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>概览页</title>
+    <meta content="no-cache" http-equiv="pragma" />
+    <link rel="stylesheet" type="text/css" href="http://piccache.cnki.net//kns/css/gb_min/simple.min.css?v=00E263BABE23AAFD" />
+    <script type="text/javascript" src="http://piccache.cnki.net//kns/script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://piccache.cnki.net//kns/script/min/gb.BriefPage.min.js?v=D59787997F3B8FCE" ></script>
+    
+</head>
+<body leftmargin="0" onload="BriefOnload();"  topmargin="0" onkeydown="grabEvent(event);" >
+    <form name="ctl00" method="post" action="brief.aspx?dbCatalog=%u4e2d%u56fd%u5b66%u672f%u671f%u520a%u7f51%u7edc%u51fa%u7248%u603b%u5e93&amp;dbPrefix=CJFQ&amp;research=off&amp;S=1&amp;ConfigFile=CJFQ.xml&amp;t=1488268898493&amp;pagename=ASP.brief_result_aspx" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNzU5NTY0MTMPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCAWRkXbTh4GiZ+mgd1hcmbX+8snBkXSHCR/0XoSbjGe2sVqk=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAI9laNoqI6kk/rea/pLPH/fbgvJz/EQj5rQumcYDL2xlthJ61LTRDoHgtGoAXdCsxJOd65eCPxEuHfLd4M66h3p" />
+        <input type="hidden" id="SqlValue" name="SqlValue" value="2827E4B6502D87109B360C96D644AF29CFD8AA1131E87A11F84513C88D88F65275B098422E350B5FA5082E16D7DB02D46F1B1CC98BD628DA29901938A03DD1DC2F41EBEEA314E187BC93C9834DA24D31A45950336FDB3686882BE707F0F604F5885ACAFA52CD6044624BE0AB23DA431C0657B66561240ACB95DB3F52EA774A11D35405BF4B1C7B8226C53B62FF2A862541C592EE2078B9CE6FF6EAEDC81E5341F8666C7D28FDD2E5935C16BB8AC8810114D73480295EE6E6271E20F1961042D407D0172EE887CC76B3D24FA9411C9A42DD0FE4AC41DBCBEAEDF67A2DE44C24BA755FAFBEA8B69D99A4CC5B7FCABF54D094D7AF6AF74621916ED716FA3C84E168C80A44467563C1C2779931D2AEDF1B96F885AB222A5F439B98FA1C8A2642F252426A7AFBC7785A9DDE467960E05E0BDC8829C0E9D8EE7F2E0CF44E4483F720D357A18956324C2FDD2EB6A6CC31D15947C5272903988F6766DBF5D8C5E1D9CFA6A6AF4014C204C5E27B8AACBF0BA82B439E9ACA47A5D633801D6F32746AA5D0513C0498EAE4602C002C23F96AA66F0EB8586FA46010DAFAC93AA5C2ED872B9AA8DBB3FEC50DA261E03696A1DC3C5869F468F099CD934206055BCCB3585ABB983729E3A666D2B1088EE3A1F0B659F4B6356EA5AD4B462D41F675E0E75C658632627F7A05A202BE412E4CB2692CB9F49A2538A6A45A2D5571A067B1E087D1B7F2CCA4B3329B685BE31113AB9228CC65A32D82DA098C0D07F0801C6B1CAC74E60FD43BC078286C10F865072596AD2310505C5CBE3FA9C1D6D0DF30B357E2CFA028743AC04BAF861916C3410EA5E0B023D90CF657C9F2F240D73138735AB33EA5DCF79A295687FE077737788DF2A7C8A870620BC828CFCC5AC94604229EB603669C6B" />
+    <input type="hidden" id="txtValue" value="" />
+    <input type="hidden" id="LoginState" value="0" />
+    <input type="hidden" id="resultcount" name="resultcount" value="235" />
+    <input type="hidden" id="krsUrl" name="krsUrl" value="http://search.cnki.net/KRS/" />
+    <script type="text/javascript">  
+        function ShowGroup(p1,p2,p3)
+        {
+            return parent.ShowGroup(p1,p2,p3);
+        } 
+    
+    
+   $(document).ready(qkInfoCall);
+    </script>   
+    
+    <script language="JavaScript">
+<!--
+	function OnChangePagenum(pagenum)
+	{
+		return false;
+	}
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+function updateCounter() {
+}
+function numMarked() {
+company =	"cnki";
+cookie = new String(getCookie("FileNameS",'2'));
+if ((cookie.substring(0,cookie.indexOf(":")) != company) || cookie.length <= 5) {
+return 0;
+}
+a=cookie.split(",");
+			return a.length;
+}
+function getErrorMsg(count) {
+count = count || '50';
+var msg = '';
+if (!window.localStorage || !window.sessionStorage) {
+    msg = '如要选择更多，请您升级浏览器到最新版本。';
+} else {
+    msg = '不能超过'+count+'个,若要重新选择,请按清除按钮,再进行选取操作';
+}
+return msg;
+}
+function ClickOpen(url) {
+if (numMarked() == 0){
+alert('请先选取文献');
+return;}
+windowOpener(url);
+}
+function checkAll(form,stype) {
+var limit = 500;
+if(!window.localStorage || !window.sessionStorage){ limit = 50;};
+e	= document.forms[0].elements;
+for (i=0;	i<e.length;	i++) {
+if (e[i].type	== "checkbox"	 &&	e[i].name == "FileNameS")	{
+if (numMarked()>= limit) {
+this.checked=false;
+alert(getErrorMsg(limit));
+return false;
+}	else {
+if (e[i].checked==false) {
+if(document.cookie.length + e[i].value.length > 4096 ){
+    alert(getErrorMsg(limit));
+    return false;}
+addToCookie(e[i].value);
+e[i].checked=true;
+}
+}
+}
+}
+updateCounter();
+return true;
+}
+function clearAllMarks(form) {
+e	= document.forms[0].elements;
+for (i=0;	i<e.length;	i++) {
+if (e[i].type	== "checkbox"	&&	e[i].name == "FileNameS" ) {
+removeFromCookie(e[i].value);
+e[i].checked=false;
+}
+}
+updateCounter();
+}
+		function getCookie(Name,stype) {
+if (window.localStorage || window.sessionStorage) {   if(stype=='2') return window.sessionStorage.getItem(Name);    return window.localStorage.getItem(Name);}var search = Name	+ "=";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search);
+if (offset !=	-1)	{
+offset +=	search.length;
+end =	document.cookie.indexOf(";", offset);
+if (end == -1)
+end =	document.cookie.length;
+return unescape(document.cookie.substring(offset,	end));
+}
+}
+}
+function setCookie(name, value,stype) {
+if (window.localStorage || window.sessionStorage){
+  if(stype == '2'){  window.sessionStorage.setItem(name, value );}
+  else{  localStorage.setItem(name, value );}
+    return true;
+}
+var cookieValue = name + "=" + escape(value)+";"+"path=/";
+if(cookieValue.length  > 4096 ){
+    return false;}
+document.cookie =	cookieValue ;
+return true;}
+function getTableNameFileNames(s){
+ if (!s || s.length <= 0) {  return ''; }
+ var tempArr = s.split('!');
+ if (tempArr.length == 4) {
+return tempArr[0] + '!' + tempArr[1];}
+return '';}
+function handlerRegexSpcileChar(input) {
+  if (input) {
+     return input.replace(/[\(|\)|\+|\.|\*]/g, function (m) { return '\\' + m;});
+  }
+  return input;
+}
+function addToCookie(v) {
+company =	"cnki";
+cookie= new String(getCookie("FileNameS",'2'));
+if ((cookie.length > 0) && ((cookie.substring(0,cookie.indexOf(':')) == company))){
+ var tableFileNames = getTableNameFileNames(v);
+ tableFileNames = handlerRegexSpcileChar(tableFileNames);
+ var re = new RegExp(tableFileNames + '[^,]*', 'ig');
+if (re.test(cookie)) return;
+if (cookie.length	- 1	== cookie.indexOf(':'))	{
+setCookie("FileNameS", cookie+v,'2');
+}	else {
+				   setCookie("FileNameS",	cookie+","+v,'2');
+			   }
+}	else {
+setCookie("FileNameS", company + ":" + v,'2');
+}
+}
+function removeFromCookie(v) {
+var company =	"cnki";
+var cookie = new String(getCookie("FileNameS",'2'));
+if (cookie.substring(0,cookie.indexOf(':')) == company) {
+cookie = cookie.substring(cookie.indexOf(':')+1,cookie.length);
+ var deleteV = function (input, value) {
+re = new RegExp("^"+handlerRegexSpcileChar(value)+"$");
+input=input.replace(re,	"");
+re = new RegExp("^"+handlerRegexSpcileChar(value)+",");
+input=input.replace(re,	"");
+re = new RegExp(","+handlerRegexSpcileChar(value)+"$");
+input=input.replace(re,	"");
+re = new RegExp(","+handlerRegexSpcileChar(value)+",");
+input=input.replace(re,	",");
+ return input;
+}
+var tableFileNames = getTableNameFileNames(v);
+ tableFileNames = handlerRegexSpcileChar(tableFileNames);
+if (tableFileNames && tableFileNames.length <= 0){ return; }
+var re = new RegExp(tableFileNames + '[^,]*', 'ig');
+var tempMaths = cookie.match(re);
+if (tempMaths && tempMaths.length > 0) {
+    for (var i = 0; i < tempMaths.length; i++){
+        cookie = deleteV(cookie, tempMaths[i]);
+    }
+}
+}	else { cookie =	""; }
+if (cookie!="")	{ setCookie("FileNameS", company + ":" + cookie,'2');}
+else { setCookie("FileNameS", company +	":",'2');}
+}
+function checkMark(c)	{
+var limit = 500;
+if(!window.localStorage || !window.sessionStorage){ limit = 50;};
+if (c.checked	== true) {
+if (numMarked()>=limit) {
+alert(getErrorMsg(limit));
+c.checked=false;
+}	else {
+if(document.cookie.length + c.value.length > 4096 ){
+    c.checked=false;
+    alert(getErrorMsg(limit));
+    return false;}
+addToCookie(c.value);
+}
+}else	{
+removeFromCookie(c.value);
+}
+updateCounter();
+}
+//-->
+</script>
+<script language=javascript >
+var newWindow	= null
+var newWindow2 = null
+function windowOpener(loadpos)
+{
+newWindow	= window.open(loadpos,"_blank","toolbar=yes,resizable=yes,scrollbars=yes,dependent,location=yes,status=yes,menubar=yes,width=550,height=450");
+newWindow.focus();
+}
+function windowOpener2(loadpos)
+{
+newWindow2 = window.open(loadpos,"","toolbar=yes,resizable=yes,scrollbars=yes,dependent,location=yes,status=yes,menubar=yes,width=550,height=450");
+}
+</script>
+<table cellspacing='0' cellpadding='0'  border='0' bgcolor=''  bgcolor='#F4F5F6' width='100%'><tr><td><table id='J_ORDER' border=0 cellspacing=0 cellpadding=0 	width=100%	align=left  class='divsearch1'><tr><td><table border=0 cellspacing=4	cellpadding=2 class='taxis'><tr><td align='left'><span class="groupsorttitle">排序:</span><span class='Btn5'><a class='cur' onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&sorttype=(FFD%2c%27RANK%27)+desc&queryid=0" title='只在800万条记录以内有效'>主题排序<img src='../images/gb/icon-d.gif' /></a></span><span class='Btn5'><a   onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&sorttype=(%e5%8f%91%e8%a1%a8%e6%97%b6%e9%97%b4%2c%27TIME%27)+desc&queryid=0">发表时间</a></span><span class='Btn5'><a   onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&sorttype=(%e8%a2%ab%e5%bc%95%e9%a2%91%e6%ac%a1%2c%27INTEGER%27)+desc&queryid=0">被引</a></span><span class='Btn5'><a   onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&sorttype=(%e4%b8%8b%e8%bd%bd%e9%a2%91%e6%ac%a1%2c%27INTEGER%27)+desc&queryid=0">下载</a></span></td><td align="right" style='width:30%;'><div class='DivDisplayMode'><span><a onclick="DisplayModeRadioBLOnChange('custommode'); return false;" href="javascript:void(0);">切换到摘要</a></span></div>
+<div  id='id_grid_display_num'  class='class_grid_display_num'>
+每页显示：<a href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&queryid=0&skuakuid=0&turnpage=1&recordsperpage=10">10</a> <a href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&queryid=0&skuakuid=0&turnpage=1&recordsperpage=20"><font class='numNow'>20</font></a> <a href="/kns/brief/brief.aspx?dbCatalog=%E4%B8%AD%E5%9B%BD%E5%AD%A6%E6%9C%AF%E6%9C%9F%E5%88%8A%E7%BD%91%E7%BB%9C%E5%87%BA%E7%89%88%E6%80%BB%E5%BA%93&dbPrefix=CJFQ&research=off&S=1&ConfigFile=CJFQ.xml&t=1488268898493&pagename=ASP.brief_result_aspx&queryid=0&skuakuid=0&turnpage=1&recordsperpage=50">50</a></div></td></tr></table></td></tr><tr><td><table class='pageBar_top' border=0 cellspacing=0	cellpadding=0 	width=100%	align=left ><tr><td align=left ><div class='SavePoint'>( <span id='selectCount' name='selectCount'>0</span> )<span style='font-size：10px;'><a href='javascript:void(0);' onclick='ClearAll(false);'>清除</a></span> <a href='javescript:void(0);' onclick='if( zeroSelectTip()){saveAs(0);} return false;'> 导出 / 参考文献</a><a href='javescript:void(0);' onclick='if( zeroSelectTip()){saveAs(1);} return false;'>分析 / 阅读</a></div></td><td align=right><div class='pageBar_min'><div class='pagerTitleCell'><span id="lbPagerTitle" name="lbPagerTitle" class="pagerTitle"></span>&nbsp;找到&nbsp;235&nbsp;条结果&nbsp;</div><span class='countPageMark'>浏览1/12</span><span class='topTurnSpan'><a id="Page_next"  href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>下一页</a></span></div></td></tr></table>
+
+
+</td></tr></table></td></tr><tr><td><table class="GridTableContent"   align=left bgColor=#969799  Border=0  CellPadding=0  CellSpacing=0  Width=100%>
+<tr class="GTContentTitle">
+<td   Width='4%' align=center STYLE=" ">
+<input type=checkbox name='selectCheckbox' id='selectCheckbox' onclick="if(this.checked){this.checked = checkAll('this.form');}else{clearAllMarks(this.form);}" ></td>
+<td   Width='45%' align=center STYLE=" ">
+篇名</td>
+<td   Width='7%' align=center STYLE=" ">
+作者</td>
+<td   Width='12%' align=center STYLE=" ">
+刊名</td>
+<td   Width='7%' align=center STYLE=" ">
+年/期</td>
+<td   Width='7%' align=center STYLE=" ">
+被引</td>
+<td   Width='8%' align=center STYLE=" ">
+下载</td>
+<td   Width='5%' align=center STYLE=" ">
+预览</td>
+<td   Width='5%' align=center STYLE=" ">
+分享</td>
+</tr>
+
+<TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201601008!1!0"  onclick="checkMark(this)"  >1</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=1&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601008&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('余Frame范畴中余积的构造'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%b4%e6%b4%aa%e5%8d%9a&scode=08465190%3b32423140%3b' target="knet">吴洪博</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%af%87%e6%b5%b7%e7%87%95&scode=08465190%3b32423140%3b' target="knet">寇海燕</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*01'>2016/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e4%bd%99Frame%e8%8c%83%e7%95%b4%e4%b8%ad%e4%bd%99%e7%a7%af%e7%9a%84%e6%9e%84%e9%80%a0&scode=SXXB201601008">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFe3V0RRdHdKJEZPF0QIBTTylDbwhXMaFHbBZGaHF2UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">75</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201601008%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201601008','');" onmouseout="SetDisplayValue('SXXB201601008','none');"><em> 分享</em>  
+          <input id="SXXB201601008" name="SXXB201601008" type="hidden" value='余Frame范畴中余积的构造-吴洪博;寇海燕;-数学学报(中文版)-2016-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=1&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601008'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602007!2!0"  onclick="checkMark(this)"  >2</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=2&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602007&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('具有无界变差的连续函数研究进展'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%a2%81%e6%b0%b8%e9%a1%ba&scode=25600769%3b' target="knet">梁永顺</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%85%b7%e6%9c%89%e6%97%a0%e7%95%8c%e5%8f%98%e5%b7%ae%e7%9a%84%e8%bf%9e%e7%bb%ad%e5%87%bd%e6%95%b0%e7%a0%94%e7%a9%b6%e8%bf%9b%e5%b1%95&scode=SXXB201602007">1</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFempmS3YUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">95</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602007%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602007','');" onmouseout="SetDisplayValue('SXXB201602007','none');"><em> 分享</em>  
+          <input id="SXXB201602007" name="SXXB201602007" type="hidden" value='具有无界变差的连续函数研究进展-梁永顺;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=2&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602007'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201601003!3!0"  onclick="checkMark(this)"  >3</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=3&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601003&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('丢番图方程X~2-(a~2+1)Y~4=3-4a'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%ae%a1%e8%ae%ad%e8%b4%b5&scode=31361336%3b' target="knet">管训贵</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*01'>2016/01</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFe1JFU5lHdKJEZPF0QIBTTylDbwhXMaFHbBZGaHF2UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">138</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201601003%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201601003','');" onmouseout="SetDisplayValue('SXXB201601003','none');"><em> 分享</em>  
+          <input id="SXXB201601003" name="SXXB201601003" type="hidden" value='丢番图方程X~2-(a~2+1)Y~4=3-4a-管训贵;-数学学报(中文版)-2016-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=3&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601003'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602002!4!0"  onclick="checkMark(this)"  >4</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=4&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602002&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('Riemann Zeta函数的七阶和式'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%be%90%e7%ad%96&scode=34494110%3b09212943%3b' target="knet">徐策</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%a8%8b%e9%87%91%e5%8f%91&scode=34494110%3b09212943%3b' target="knet">程金发</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeyg0NHdUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">128</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602002%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602002','');" onmouseout="SetDisplayValue('SXXB201602002','none');"><em> 分享</em>  
+          <input id="SXXB201602002" name="SXXB201602002" type="hidden" value='Riemann Zeta函数的七阶和式-徐策;程金发;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=4&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602002'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602001!5!0"  onclick="checkMark(this)"  >5</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=5&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602001&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('Banach空间中弱收敛序列系数的估计'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%b7%a6%e5%8d%a0%e9%a3%9e&scode=28150612%3b28161885%3b10495923%3b10040758%3b' target="knet">左占飞</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%8e%8b%e8%89%af%e4%bc%9f&scode=28150612%3b28161885%3b10495923%3b10040758%3b' target="knet">王良伟</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%88%98%e5%ad%a6%e9%a3%9e&scode=28150612%3b28161885%3b10495923%3b10040758%3b' target="knet">刘学飞</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%99%88%e6%99%93%e6%98%a5&scode=28150612%3b28161885%3b10495923%3b10040758%3b' target="knet">陈晓春</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeaRmWMdUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">168</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602001%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602001','');" onmouseout="SetDisplayValue('SXXB201602001','none');"><em> 分享</em>  
+          <input id="SXXB201602001" name="SXXB201602001" type="hidden" value='Banach空间中弱收敛序列系数的估计-左占飞;王良伟;刘学飞;陈晓春;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=5&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602001'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201502010!6!0"  onclick="checkMark(this)"  >6</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=6&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201502010&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('强并半格中的C-滤子及其应用'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%b4%e6%b4%aa%e5%8d%9a&scode=08465190%3b32423140%3b' target="knet">吴洪博</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%af%87%e6%b5%b7%e7%87%95&scode=08465190%3b32423140%3b' target="knet">寇海燕</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*02'>2015/02</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%bc%ba%e5%b9%b6%e5%8d%8a%e6%a0%bc%e4%b8%ad%e7%9a%84C-%e6%bb%a4%e5%ad%90%e5%8f%8a%e5%85%b6%e5%ba%94%e7%94%a8&scode=SXXB201502010">3</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeyRWdSR0dsVTMWhUTjZFSRVzRkdEaxM0KJpVcpBXN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">71</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201502010%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201502010','');" onmouseout="SetDisplayValue('SXXB201502010','none');"><em> 分享</em>  
+          <input id="SXXB201502010" name="SXXB201502010" type="hidden" value='强并半格中的C-滤子及其应用-吴洪博;寇海燕;-数学学报(中文版)-2015-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=6&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201502010'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602011!7!0"  onclick="checkMark(this)"  >7</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=7&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602011&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('一类最优组合批处理码'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e8%b4%be%e5%86%ac%e5%86%ac&scode=' target="knet">贾冬冬</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%bc%a0%e6%9b%b4%e7%94%9f&scode=' target="knet">张更生</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e8%a2%81%e5%85%b0%e5%85%9a&scode=' target="knet">袁兰党</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e4%b8%80%e7%b1%bb%e6%9c%80%e4%bc%98%e7%bb%84%e5%90%88%e6%89%b9%e5%a4%84%e7%90%86%e7%a0%81&scode=SXXB201602011">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeRd1QvwWN0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">53</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602011%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602011','');" onmouseout="SetDisplayValue('SXXB201602011','none');"><em> 分享</em>  
+          <input id="SXXB201602011" name="SXXB201602011" type="hidden" value='一类最优组合批处理码-贾冬冬;张更生;袁兰党;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=7&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602011'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201501004!8!0"  onclick="checkMark(this)"  >8</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=8&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501004&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('复微分方程组的超越解'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%ab%98%e5%87%8c%e4%ba%91&scode=07755991%3b' target="knet">高凌云</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*01'>2015/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%a4%8d%e5%be%ae%e5%88%86%e6%96%b9%e7%a8%8b%e7%bb%84%e7%9a%84%e8%b6%85%e8%b6%8a%e8%a7%a3&scode=SXXB201501004">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFekFmdZBFSHZ2TwVVQrZURuJzQ3o3ciF3dZRVSzMTN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">159</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201501004%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201501004','');" onmouseout="SetDisplayValue('SXXB201501004','none');"><em> 分享</em>  
+          <input id="SXXB201501004" name="SXXB201501004" type="hidden" value='复微分方程组的超越解-高凌云;-数学学报(中文版)-2015-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=8&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501004'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201501002!9!0"  onclick="checkMark(this)"  >9</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=9&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501002&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('非局部时滞反应扩散方程行波解的稳定性'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%8e%8b%e5%b0%8f%e7%84%95&scode=31521965%3b31521964%3b' target="knet">王小焕</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%95%e5%b9%bf%e8%bf%8e&scode=31521965%3b31521964%3b' target="knet">吕广迎</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*01'>2015/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e9%9d%9e%e5%b1%80%e9%83%a8%e6%97%b6%e6%bb%9e%e5%8f%8d%e5%ba%94%e6%89%a9%e6%95%a3%e6%96%b9%e7%a8%8b%e8%a1%8c%e6%b3%a2%e8%a7%a3%e7%9a%84%e7%a8%b3%e5%ae%9a%e6%80%a7&scode=SXXB201501002">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFemFmdZBFSHZ2TwVVQrZURuJzQ3o3ciF3dZRVSzMTN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">111</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201501002%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201501002','');" onmouseout="SetDisplayValue('SXXB201501002','none');"><em> 分享</em>  
+          <input id="SXXB201501002" name="SXXB201501002" type="hidden" value='非局部时滞反应扩散方程行波解的稳定性-王小焕;吕广迎;-数学学报(中文版)-2015-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=9&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501002'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201506008!10!0"  onclick="checkMark(this)"  >10</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=10&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201506008&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('完全3-一致超图K_n~((3))的哈密顿圈分解'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%9c%8d%e7%ba%a2&scode=29750483%3b' target="knet">霍红</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e8%b5%b5%e5%87%8c%e7%90%aa&scode=29750483%3b' target="knet">赵凌琪</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%86%af%e4%bc%9f&scode=29750483%3b' target="knet">冯伟</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%9d%a8%e5%85%83%e7%94%9f&scode=29750483%3b' target="knet">杨元生</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%89%e6%97%a5%e6%9c%a8%e5%9b%be&scode=29750483%3b' target="knet">吉日木图</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*06'>2015/06</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%ae%8c%e5%85%a83-%e4%b8%80%e8%87%b4%e8%b6%85%e5%9b%beK_n%7e((3))%e7%9a%84%e5%93%88%e5%af%86%e9%a1%bf%e5%9c%88%e5%88%86%e8%a7%a3&scode=SXXB201506008">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeyJnWuNGUwgFTa9CTHRGVwo2RNJzRsl2STJleVtEe4UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">64</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201506008%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201506008','');" onmouseout="SetDisplayValue('SXXB201506008','none');"><em> 分享</em>  
+          <input id="SXXB201506008" name="SXXB201506008" type="hidden" value='完全3-一致超图K_n~((3))的哈密顿圈分解-霍红;赵凌琪;冯伟;杨元生;吉日木图;-数学学报(中文版)-2015-11-15|/kns/detail/detail.aspx?QueryID=0&CurRec=10&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201506008'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602003!11!0"  onclick="checkMark(this)"  >11</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=11&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602003&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('具有特殊伸缩矩阵的Parseval框架小波集的结构'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%bb%84%e6%b0%b8%e4%b8%9c&scode=15306607%3b' target="knet">黄永东</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFepxGeDdUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">72</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602003%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602003','');" onmouseout="SetDisplayValue('SXXB201602003','none');"><em> 分享</em>  
+          <input id="SXXB201602003" name="SXXB201602003" type="hidden" value='具有特殊伸缩矩阵的Parseval框架小波集的结构-黄永东;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=11&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602003'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201601009!12!0"  onclick="checkMark(this)"  >12</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=12&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601009&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('右半平面解析的Laplace-Stieltjes变换的广义级与型'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%ad%94%e8%8d%ab%e8%8e%b9&scode=33245725%3b22053478%3b' target="knet">孔荫莹</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%9c%8d%e9%a2%96%e8%8e%b9&scode=33245725%3b22053478%3b' target="knet">霍颖莹</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*01'>2016/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%8f%b3%e5%8d%8a%e5%b9%b3%e9%9d%a2%e8%a7%a3%e6%9e%90%e7%9a%84Laplace-Stieltjes%e5%8f%98%e6%8d%a2%e7%9a%84%e5%b9%bf%e4%b9%89%e7%ba%a7%e4%b8%8e%e5%9e%8b&scode=SXXB201601009">2</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeWJ1TVdHdKJEZPF0QIBTTylDbwhXMaFHbBZGaHF2UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">40</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201601009%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201601009','');" onmouseout="SetDisplayValue('SXXB201601009','none');"><em> 分享</em>  
+          <input id="SXXB201601009" name="SXXB201601009" type="hidden" value='右半平面解析的Laplace-Stieltjes变换的广义级与型-孔荫莹;霍颖莹;-数学学报(中文版)-2016-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=12&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601009'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602004!13!0"  onclick="checkMark(this)"  >13</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=13&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602004&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('Banach空间上变分不等式的一个超梯度方法'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%94%90%e5%9b%bd%e5%90%89&scode=10835850%3b31566540%3b' target="knet">唐国吉</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%b1%aa%e6%98%9f&scode=10835850%3b31566540%3b' target="knet">汪星</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeD1EayYUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">76</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602004%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602004','');" onmouseout="SetDisplayValue('SXXB201602004','none');"><em> 分享</em>  
+          <input id="SXXB201602004" name="SXXB201602004" type="hidden" value='Banach空间上变分不等式的一个超梯度方法-唐国吉;汪星;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=13&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602004'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201501003!14!0"  onclick="checkMark(this)"  >14</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=14&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501003&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('变指数Herz空间上的Hardy型算子的交换子'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%9d%9f%e7%ab%8b%e7%94%9f&scode=06189612%3b06211071%3b06210372%3b' target="knet">束立生</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%8e%8b%e6%95%8f&scode=06189612%3b06211071%3b06210372%3b' target="knet">王敏</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e7%9e%bf%e8%90%8c&scode=06189612%3b06211071%3b06210372%3b' target="knet">瞿萌</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*01'>2015/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e5%8f%98%e6%8c%87%e6%95%b0Herz%e7%a9%ba%e9%97%b4%e4%b8%8a%e7%9a%84Hardy%e5%9e%8b%e7%ae%97%e5%ad%90%e7%9a%84%e4%ba%a4%e6%8d%a2%e5%ad%90&scode=SXXB201501003">1</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFejFmdZBFSHZ2TwVVQrZURuJzQ3o3ciF3dZRVSzMTN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">85</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201501003%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201501003','');" onmouseout="SetDisplayValue('SXXB201501003','none');"><em> 分享</em>  
+          <input id="SXXB201501003" name="SXXB201501003" type="hidden" value='变指数Herz空间上的Hardy型算子的交换子-束立生;王敏;瞿萌;-数学学报(中文版)-2015-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=14&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501003'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201601001!15!0"  onclick="checkMark(this)"  >15</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=15&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601001&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('玛欣凯维奇函数与泊松核的一个新微分性质'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%b1%aa%e6%88%90%e5%92%8f&scode=14406543%3b06323310%3b' target="knet">汪成咏</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%b8%a0%e5%88%9a%e8%8d%a3&scode=14406543%3b06323310%3b' target="knet">渠刚荣</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*01'>2016/01</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeZBla3kHdKJEZPF0QIBTTylDbwhXMaFHbBZGaHF2UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">68</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201601001%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201601001','');" onmouseout="SetDisplayValue('SXXB201601001','none');"><em> 分享</em>  
+          <input id="SXXB201601001" name="SXXB201601001" type="hidden" value='玛欣凯维奇函数与泊松核的一个新微分性质-汪成咏;渠刚荣;-数学学报(中文版)-2016-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=15&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201601001'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602010!16!0"  onclick="checkMark(this)"  >16</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=16&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602010&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('Reinhardt域上一类推广的Roper-Suffridge算子'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%88%98%e6%b5%a9&scode=07175184%3b32286178%3b' target="knet">刘浩</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%a4%8f%e7%ba%a2%e5%b7%9d&scode=07175184%3b32286178%3b' target="knet">夏红川</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFe48mS3wWN0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">58</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602010%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602010','');" onmouseout="SetDisplayValue('SXXB201602010','none');"><em> 分享</em>  
+          <input id="SXXB201602010" name="SXXB201602010" type="hidden" value='Reinhardt域上一类推广的Roper-Suffridge算子-刘浩;夏红川;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=16&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602010'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2016!SXXB201602006!17!0"  onclick="checkMark(this)"  >17</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=17&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602006&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('非线性各向异性椭圆方程的均匀化'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e8%b5%b5%e7%a3%8a%e5%a8%9c&scode=10642306%3b' target="knet">赵磊娜</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2016*02'>2016/02</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFe6JTQvYUb0UGdVh0NZxEVotGdpRWRChzTv50KON1UHdHNn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2016"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">80</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2016%26filename%3dSXXB201602006%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201602006','');" onmouseout="SetDisplayValue('SXXB201602006','none');"><em> 分享</em>  
+          <input id="SXXB201602006" name="SXXB201602006" type="hidden" value='非线性各向异性椭圆方程的均匀化-赵磊娜;-数学学报(中文版)-2016-03-15|/kns/detail/detail.aspx?QueryID=0&CurRec=17&DbCode=CJFQ&dbname=CJFDLAST2016&filename=SXXB201602006'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201503008!18!0"  onclick="checkMark(this)"  >18</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=18&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201503008&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('三阶上三角算子矩阵点谱,连续谱和剩余谱的扰动'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%b4%e7%a7%80%e5%b3%b0&scode=14612943%3b07984560%3b07993747%3b' target="knet">吴秀峰</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%bb%84%e4%bf%8a%e6%9d%b0&scode=14612943%3b07984560%3b07993747%3b' target="knet">黄俊杰</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%98%bf%e6%8b%89%e5%9d%a6%e4%bb%93&scode=14612943%3b07984560%3b07993747%3b' target="knet">阿拉坦仓</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*03'>2015/03</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e4%b8%89%e9%98%b6%e4%b8%8a%e4%b8%89%e8%a7%92%e7%ae%97%e5%ad%90%e7%9f%a9%e9%98%b5%e7%82%b9%e8%b0%b1%2c%e8%bf%9e%e7%bb%ad%e8%b0%b1%e5%92%8c%e5%89%a9%e4%bd%99%e8%b0%b1%e7%9a%84%e6%89%b0%e5%8a%a8&scode=SXXB201503008">3</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeKNGN1AjYPNFMJdHZzkWZolnNxlGMSRnU1kVS40WN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">82</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201503008%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201503008','');" onmouseout="SetDisplayValue('SXXB201503008','none');"><em> 分享</em>  
+          <input id="SXXB201503008" name="SXXB201503008" type="hidden" value='三阶上三角算子矩阵点谱,连续谱和剩余谱的扰动-吴秀峰;黄俊杰;阿拉坦仓;-数学学报(中文版)-2015-05-15|/kns/detail/detail.aspx?QueryID=0&CurRec=18&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201503008'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201504013!19!0"  onclick="checkMark(this)"  >19</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=19&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201504013&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('一种基于正则化的稀疏表示方法'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%91%a8%e9%94%8b&scode=33302642%3b33302643%3b10482513%3b' target="knet">周锋</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%9b%be%e9%9b%aa%e8%bf%8e&scode=33302642%3b33302643%3b10482513%3b' target="knet">曾雪迎</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%9d%a8%e5%8a%9b%e5%8d%8e&scode=33302642%3b33302643%3b10482513%3b' target="knet">杨力华</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*04'>2015/04</a>
+      
+      </td>
+      <td align="right"></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFeyJ3TN9CW3x0MStGeC1WRxhWdz12T0dUUqlUVxgVN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">100</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201504013%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201504013','');" onmouseout="SetDisplayValue('SXXB201504013','none');"><em> 分享</em>  
+          <input id="SXXB201504013" name="SXXB201504013" type="hidden" value='一种基于正则化的稀疏表示方法-周锋;曾雪迎;杨力华;-数学学报(中文版)-2015-07-15|/kns/detail/detail.aspx?QueryID=0&CurRec=19&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201504013'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="CJFDLAST2015!SXXB201501009!20!0"  onclick="checkMark(this)"  >20</td><td >
+      <a class="fz14" href='/kns/detail/detail.aspx?QueryID=0&CurRec=20&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501009&urlid=&yx=' target='_blank'><script language="javascript">document.write(ReplaceChar1(ReplaceChar(ReplaceJiankuohao('波包Parseval框架的刻画及应用'))));</script></a>
+      
+            
+      
+      </td>
+      <td>
+         <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e5%90%b4%e5%9b%bd%e6%98%8c&scode=25745735%3b26417280%3b08466870%3b11182204%3b' target="knet">吴国昌</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e6%9b%b9%e6%80%80%e4%bf%a1&scode=25745735%3b26417280%3b08466870%3b11182204%3b' target="knet">曹怀信</a>; <a class='KnowledgeNetLink' href='/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=%e4%bd%9c%e8%80%85&skey=%e9%b2%81%e5%a4%a7%e5%8b%87&scode=25745735%3b26417280%3b08466870%3b11182204%3b' target="knet">鲁大勇</a>
+      </td>
+      <td class='cjfdyxyz'>
+      <input type='hidden' value='SXXB' /> 
+        <a  target="_blank" href='../oldNavi/Bridge.aspx?LinkType=BaseLink&DBCode=cjfq&TableName=cjfqbaseinfo&Field=BaseID&Value=SXXB' style='color:#ff01fc;' title='紫色刊名为“中国知网”独家出版刊物'>数学学报(中文版)</a>
+      </td>
+      <td>
+           
+        <a target="_blank" href='../oldNavi/Bridge.aspx?LinkType=IssueLink&DBCode=cjfq&TableName=cjfqyearinfo&ShowField=cname&Field=BaseID*year*issue&Value=SXXB*2015*01'>2015/01</a>
+      
+      </td>
+      <td align="right"><a class='KnowledgeNetLink' target="_blank" href="/kns/popup/knetsearchNew.aspx?sdb=CJFQ&sfield=cite&skey=%e6%b3%a2%e5%8c%85Parseval%e6%a1%86%e6%9e%b6%e7%9a%84%e5%88%bb%e7%94%bb%e5%8f%8a%e5%ba%94%e7%94%a8&scode=SXXB201501009">1</a></td>
+      <td align="left"><a href="../download.aspx?filename=xsCZyAHcvdkc2NjZLhTMvdEaURTTvNlUJNGVCZ0VvJVYXBzMiBnU25WV2hEbPlkQy4mVv4mVCNFaOBFezFmdZBFSHZ2TwVVQrZURuJzQ3o3ciF3dZRVSzMTN0UWOn1EbOFTYMBTYEFFOzhTZX1GW3g0UBRHNy4ET&tablename=CJFDLAST2015"	target=_blank class="brief_downloadIcon"><img title='下载' src="http://piccache.cnki.net//kns/images/gb/login_download.gif"  border=0	 ></a><span class="downloadCount">70</span></td> 
+      <td align="center">
+        <a target="online_open" class="readonline" title="预览" href='/kns/ReadRedirectPage.aspx?domain=%2fKReader%2fRedriectPage.aspx%3ftablename%3dCJFDLAST2015%26filename%3dSXXB201501009%26dbCode%3dCJFQ'></a>
+      </td>     
+      <td align="center">
+        <div class="sharebox"   onmouseover="SetDisplayValue('SXXB201501009','');" onmouseout="SetDisplayValue('SXXB201501009','none');"><em> 分享</em>  
+          <input id="SXXB201501009" name="SXXB201501009" type="hidden" value='波包Parseval框架的刻画及应用-吴国昌;曹怀信;鲁大勇;-数学学报(中文版)-2015-01-15|/kns/detail/detail.aspx?QueryID=0&CurRec=20&DbCode=CJFQ&dbname=CJFDLAST2015&filename=SXXB201501009'></input><script>GetShareWeibos();</script>
+         </div>
+      </td></TR></table>
+
+
+</td></tr><tr><td><table class='pageBar_bottom' border=0 cellspacing=0	cellpadding=0 	width=100%	align=left ><tr><td align=left  colspan=9><div class='TitleLeftCell'><div class='pagerTitleCell'><span id="lbPagerTitle" name="lbPagerTitle" class="pagerTitle"></span>&nbsp;找到&nbsp;235&nbsp;条结果&nbsp;</div><font class='Mark'>1</font><a href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>2</a><a href="?curpage=3&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>3</a><a href="?curpage=4&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>4</a><a href="?curpage=5&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>5</a><a href="?curpage=6&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>6</a><a href="?curpage=7&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>7</a><a href="?curpage=8&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>8</a><a href="?curpage=9&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>9</a><a  href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=CJFQ&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>下一页</a></div></div></td></tr></table>
+
+
+</td></tr></table>
+       
+    <input name="tpagemode" type="hidden" id="tpagemode" value="L" />
+    </form>
+
+    <script type="text/javascript">
+    try{}catch(e){}
+    ChangeDownloadImg();
+    briefTableListJSEvent();
+    BindOnlick_ShowWait();
+    BindTurnPage_TitleTip();
+    RevertUserSelect();
+    </script>   
+    <script src="http://search.cnki.net/KRS//Scripts/Recommend.js" type="text/javascript"></script>  
+</body>
+    <style type="text/css">
+        .flyingAdd
+        {
+            left: -100px;
+            top: 0px;
+            position: absolute;
+            width: 50px;
+            text-align: center;
+            height: 50px;
+            font-size: 50px;
+            color: #999;
+            z-index: 50000;
+        }
+    </style>
+    <div style="left: -1000px; top: -100px; opacity: 1; font-size: 50px;" class="flyingAdd">
+        <img src="http://piccache.cnki.net//kns/images/gb/checkboxbook.png" alt="" /></div>
+</html>
