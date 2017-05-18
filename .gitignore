@@ -3,3 +3,9 @@
 
 # .idea文件夹
 *.idea
+# .csv文件
+*.csv
+# .html文件
+*.html
+# .log
+*.log
