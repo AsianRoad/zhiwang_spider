@@ -38,7 +38,7 @@ class zwspider(Spider):
     name = 'zw'
     allowed_domains = []
     start_urls = ['http://kns.cnki.net/kns/brief/result.aspx?dbprefix=CJFQ']
-
+    # 请求头
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'Accept-Encoding': 'gzip, deflate, sdch',
@@ -48,7 +48,7 @@ class zwspider(Spider):
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
         'Upgrade-Insecure-Requests':'1',
     }
-
+    # cookies信息，可修改
     cookies = {
         'Ecp_ClientId': '2170516135301619463',
         'cnkiUserKey': '28cb43cb-113e-f055-4c21-efcadff6d792',
@@ -65,26 +65,30 @@ class zwspider(Spider):
     def __init__(self, query='', time=''):
         # 第一次链接
         # http://kns.cnki.net/kns/request/SearchHandler.ashx?
+        # 模糊搜索表单
+        # magazine_special1 值 = ：精确匹配 % ：模糊匹配
         self.formdata = urllib.urlencode(
-            {'magazine_value1': '计算机学报', 'year_from': '2010', 'year_to': '2016', 'NaviCode': '*', 'ua': '1.21',
+            {'magazine_value1': '计算机学报', 'year_from': '2014', 'year_to': '2016', 'NaviCode': '*', 'ua': '1.21',
              'PageName': 'ASP.brief_result_aspx',
              'DbPrefix': 'CJFQ', 'DbCatalog': '中国学术期刊网络出版总库', 'ConfigFile': 'CJFQ.xml', 'db_opt': 'CJFQ',
              'db_value': '中国学术期刊网络出版总库', 'magazine_special1': '%', 'year_type': 'echar', 'his': '0',
              '__': 'Mon Feb 27 2017 16:37:42 GMT+0800 (中国标准时间)', 'action': ''
              })
+        # 精确搜索表单
+        # hidMagezineCode ：期刊代码
         self.formdata_jingque=urllib.urlencode({'hidMagezineCode':'JSJX','year_from':'2010','year_to':'2016','NaviCode':'*','ua':'1.21','PageName':'ASP.brief_result_aspx',
                            'DbPrefix':'CJFQ','DbCatalog':'中国学术期刊网络出版总库','ConfigFile':'CJFQ.xml','db_opt':'CJFQ',
                            'db_value':'中国学术期刊网络出版总库','magazine_special1':'=','year_type':'echar','his':'0',
                              '__':'Mon Feb 27 2017 16:37:42 GMT+0800 (中国标准时间)', 'action':''
                                               })
-
+    # 提交查询表单
     def parse(self, response):
         return Request("http://kns.cnki.net//kns/request/SearchHandler.ashx?"+self.formdata,
                        headers=self.headers,
                        cookies=self.cookies,
                        callback=self.Search1
                        )
-
+    #
     def Search1(self,response):
         filename = 'search1.html'
         with open(filename, 'wb') as f:
@@ -94,6 +98,7 @@ class zwspider(Spider):
                        cookies=self.cookies,
                        callback=self.Search2
                        )
+    # 获得页面
     def Search2(self,response):
         filename = 'search2.html'
         with open(filename, 'wb') as f:
@@ -102,18 +107,21 @@ class zwspider(Spider):
                        headers=self.headers,
                        cookies=self.cookies,
                        callback=self.Search3)
-
+    # 处理数据
     def Search3(self,response):
         filename = 'result.html'
         print response.url
         with open(filename, 'wb') as f:
             f.write(response.body)
+        # 判断有没有验证码
         if 'CheckCodeImg' in response.body:
             print 'need check code!'
+            # 带cookie的请求获得验证码图片
             img = requests.get('http://kns.cnki.net/kns/checkcode.aspx?t=%2+Math.random()',stream=True,headers=self.headers ,
                                cookies = self.cookies)
             rurl = response.url.split('=')[1].split('&vericode')[0]
-            # 验证码图片截取 无效
+
+            # 验证码图片截取 无效不使用此方法
             # driver.get(response.url)
             # print response.url
             # captcha = driver.find_element_by_id('CheckCodeImg')
@@ -128,11 +136,15 @@ class zwspider(Spider):
             # img = img.crop((left,top,right,bottom))
             # img.show()
             # img.save('./cap.png')
+
             with open('1.gif', 'wb') as f:
                 f.write(img.content)
             img = Image.open('1.gif')
+            # 识别验证码
             checkcode = distinguish_captcha(img)
             print checkcode
+
+            # 构造回调请求信息
             veriform = 'rurl='+rurl+'&vericode='+checkcode
             print veriform
             yield Request(
@@ -143,10 +155,11 @@ class zwspider(Spider):
                 dont_filter = True
             )
         else:
+            # 解析页面数据
             next_pages = response.xpath('//a[@id="Page_next"]/@href').extract_first()
             for tr in response.css('table.GridTableContent').xpath('tr[position()>1]'):
                 paper = ZhiwangspiderItem()
-                paper['title'] = tr.xpath('td[2]/a//text()').extract()[0].split('\'')[0]
+                paper['title'] = [tr.xpath('td[2]/a//text()').extract()[0].split('\'')[0]]
                 paper['author'] = tr.xpath('td[3]/a/text()').extract()
                 paper['journal'] = tr.xpath('td[4]/a//text()').extract()
 
