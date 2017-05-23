@@ -9,3 +9,5 @@
 *.html
 # .log
 *.log
+# .cfg文件
+*.cfg
